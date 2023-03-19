@@ -1,4 +1,4 @@
-## metamask sign tool
+# metamask sign tool
 
-# start server
+## start server
 npm start
