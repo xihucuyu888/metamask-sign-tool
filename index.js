@@ -2,6 +2,7 @@ import './styles.css';
 
 const inputMessage = document.getElementById("inputMessage");
 const signButton = document.getElementById("signButton");
+const outputMessage = document.getElementById('outputMessage');
 
 
 signButton.addEventListener('click', handleMetamaskClick);
@@ -20,7 +21,7 @@ async function handleMetamaskClick() {
         .request({ method, params })
         .then((signature) => {
           console.log("签名结果:", signature);
-          alert(`签名成功，签名结果：\n\n${signature}`);
+          outputMessage.textContent = `签名结果：${signature}`;
         })
         .catch((error) => {
           console.error("签名失败:", error);
